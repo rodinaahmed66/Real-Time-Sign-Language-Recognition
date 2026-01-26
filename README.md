@@ -112,7 +112,7 @@ Swagger UI:
 3️⃣ Run Streamlit Frontend
 ``` streamlit run streamlit_app.py ```
 
-🧪 Model Training
+# **🧪 Model Training**
 Model training is handled in:
 
 ``` src/model/train.py ```
@@ -130,7 +130,8 @@ Data augmentation
 Early stopping & learning rate scheduling
 
 
-📊 Evaluation
+# **📊Evaluation**
+
 
 Confusion Matrix
 
@@ -146,7 +147,7 @@ Accuracy & Loss plots
 
 ``` src/utils/plot_history.py ```
 
-🌐 Deployment Strategy
+# **🌐 Deployment Strategy**
 
 Backend: FastAPI 
 
