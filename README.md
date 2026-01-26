@@ -58,7 +58,7 @@ Optimizer: Adam
 Metrics: Accuracy
 
 📁 Project Structure
-REAL-TIME-END-TO-END-SIGN-LANGUAGE-RECOGNITION
+
 ```│
 │
 ├── data/
@@ -117,7 +117,7 @@ Model training is handled in:
 
 ``` src/model/train.py ```
 
-Includes:
+# Includes:
 
 Data loading
 
@@ -138,15 +138,18 @@ Classification Report
 
 Accuracy & Loss plots
 
-Implemented in:
+# Implemented in:
 
 ``` src/model/evaluate.py```
+
 ``` src/utils/plot_cm.py ```
+
 ``` src/utils/plot_history.py ```
 
 🌐 Deployment Strategy
 
 Backend: FastAPI 
+
 Frontend: Streamlit 
 
 
