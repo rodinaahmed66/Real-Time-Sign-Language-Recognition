@@ -9,9 +9,8 @@ st.title("ASL Real-Time Detection")
 st.write("Webcam-based ASL recognition using FastAPI backend.")
 
 # Sidebar options
-st.sidebar.header("Settings")
-frame_interval = st.sidebar.slider("Frames per prediction", 1, 60, 50)
-confidence_threshold = st.sidebar.slider("Confidence Threshold (%)", 0, 100, 60)
+frame_interval = 40
+confidence_threshold = 60
 
 # API URL
 API_URL = st.text_input("Enter FastAPI URL:", "http://127.0.0.1:8000/predict")
