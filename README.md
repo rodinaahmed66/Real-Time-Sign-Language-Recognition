@@ -58,8 +58,8 @@ Optimizer: Adam
 Metrics: Accuracy
 
 📁 Project Structure
-```
-REAL-TIME-END-TO-END-SIGN-LANGUAGE-RECOGNITION/
+REAL-TIME-END-TO-END-SIGN-LANGUAGE-RECOGNITION
+```│
 │
 ├── data/
 │   ├── data_loader.py
@@ -67,7 +67,7 @@ REAL-TIME-END-TO-END-SIGN-LANGUAGE-RECOGNITION/
 │   └── data_handle.py
 │
 ├── models/
-│   └── ASL.keras           # trained model (not pushed to GitHub)
+│   └── ASL.keras           # trained model 
 │
 ├── notebooks/
 │   └── hand-gesture-based-sign-language-detection.ipynb
@@ -97,17 +97,56 @@ REAL-TIME-END-TO-END-SIGN-LANGUAGE-RECOGNITION/
 ├── requirements.txt
 └── README.md
 ```
+
 🚀 Running the Project
 
 1️⃣ Install Dependencies
 ``` pip install -r requirements.txt ```
 
 2️⃣ Run FastAPI Backend
-``` uvicorn src.API.API:app --reload ```
+``` uvicorn API:app --reload ```
 
 Swagger UI:
 ``` http://127.0.0.1:8000/docs ```
  
 3️⃣ Run Streamlit Frontend
-``` streamlit run src/frontend/streamlit_app.py ```
+``` streamlit run streamlit_app.py ```
+
+🧪 Model Training
+Model training is handled in:
+
+``` src/model/train.py ```
+
+Includes:
+
+Data loading
+
+Label encoding
+
+Train/validation split
+
+Data augmentation
+
+Early stopping & learning rate scheduling
+
+
+📊 Evaluation
+
+Confusion Matrix
+
+Classification Report
+
+Accuracy & Loss plots
+
+Implemented in:
+
+``` src/model/evaluate.py```
+``` src/utils/plot_cm.py ```
+``` src/utils/plot_history.py ```
+
+🌐 Deployment Strategy
+
+Backend: FastAPI 
+Frontend: Streamlit 
+
 
