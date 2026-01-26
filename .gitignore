@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.env
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Model files
+*.h5
+*.keras
+*.onnx
+*.pt
+*.pth
+
+# Data
+*.npy
+*.csv
+data/
+datasets/
+
+# Logs
+logs/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Kaggle
+kaggle.json
