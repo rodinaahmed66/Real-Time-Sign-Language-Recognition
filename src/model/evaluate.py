@@ -12,10 +12,7 @@ def CM(y_test,y_test_predict):
 
     '''
 
-    y_pred = np.argmax(y_test_predict, axis=1)
-    y_true = np.argmax(y_test, axis=1)
-
-    cm = confusion_matrix(y_true, y_pred)
+    cm = confusion_matrix(y_true, y_test_predict)
     return cm
 
 def report(y_test,y_test_predict):
