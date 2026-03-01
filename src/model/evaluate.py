@@ -12,7 +12,7 @@ def CM(y_test,y_test_predict):
 
     '''
 
-    cm = confusion_matrix(y_test, y_test_pred)
+    cm = confusion_matrix(y_test, y_test_predict)
     return cm
 
 def report(y_test,y_test_predict):
