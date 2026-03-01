@@ -39,8 +39,8 @@ x_train,x_valid,y_train,y_valid=split(x_train,y_train,size=0.1)
 
 # --- Generators ---
 train_gen=train_generator().flow(x_train,y_train,batch_size=16,shuffle=True)
-val_gen=other_generator.flow(x_valid,y_valid,batch_size=16,shuffle=False)
-test_gen = other_generator.flow(
+val_gen=other_generator().flow(x_valid,y_valid,batch_size=16,shuffle=False)
+test_gen = other_generator().flow(
     x_test, y_test, batch_size=16, shuffle=False
 )
 
