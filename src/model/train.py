@@ -3,6 +3,7 @@ from data.data_loader import data_loader
 from data.data_explore import balance_or,remove_unbalance
 from data.data_handle import encode_label,split,train_generator,other_generator
 from model.architecture import CNN_model
+import matplotlib.pyplot as plt
 from utils.plot_history import plot_history,plot_CM
 from  model.callbacks import early_stop
 from tensorflow.keras.optimizers import Adam
@@ -80,5 +81,6 @@ y_test_predict=np.argmax(model.predict(test_gen), axis=1)
 cm=CM(y_true,y_test_predict)
 # --- plot confusion matrix ---
 plot_CM(cm)
+plt.savefig("confusion_matrix.png")
 # --- print classification report ---
 print(report(y_true,y_test_predict))
