@@ -1,0 +1,45 @@
+name: Sign Language ML CI
+
+# Run CI only on ci-setup branch
+on:
+  push:
+    branches:
+      - ci-setup
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    env:
+      IMG_PATH: data/images
+      LABEL_PATH: data/labels
+
+    steps:
+      # 1️⃣ Checkout repository
+      - uses: actions/checkout@v3
+
+      # 2️⃣ Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4️⃣ Create data folders
+      - name: Create data folders
+        run: mkdir -p data/images data/labels
+
+      # 5️⃣ Download Kaggle dataset
+      - name: Download dataset from Kaggle
+        run: |
+          pip install kaggle
+          mkdir -p ~/.kaggle
+          echo "{\"username\":\"${{ secrets.KAGGLE_USERNAME }}\",\"key\":\"${{ secrets.KAGGLE_KEY }}\"}" > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
+          kaggle datasets download -d ardamavi/27-class-sign-language-dataset -p data --unzip
+
+      # 6️⃣ Run training script
+      - name: Run training
+        run: python src/train.py
