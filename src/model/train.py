@@ -1,5 +1,5 @@
 #import packages
-from data processing import data_loader
+from data processing.data_loader import data_loader
 from data processing.data_explore import balance_or,remove_unbalance
 from data processing.data_handle import encode_label,split,train_generator,other_generator
 from model.architecture import CNN_model
