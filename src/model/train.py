@@ -33,8 +33,8 @@ y_encod=encode_label(y)
 
 
 # --- Split data ---
-x_train,x_test,y_train,y_test=split(x,y_encod,test_size=0.2)
-x_train,x_valid,y_train,y_valid=split(x_train,y_train,test_size=0.1)
+x_train,x_test,y_train,y_test=split(x,y_encod,size=0.2)
+x_train,x_valid,y_train,y_valid=split(x_train,y_train,size=0.1)
 
 
 # --- Generators ---
