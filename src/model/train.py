@@ -3,7 +3,8 @@ from src.data_processing.data_loader import data_loader
 from src.data_processing.data_explore import balance_or,remove_unbalance
 from src.data_processing.data_handle import encode_label,split,train_generator,other_generator
 from src.model.architecture import CNN_model
-from utils.plot_history import plot_history,plot_CM
+from utils.plot_history import plot_history
+from utils.plot_cm import plot_CM
 from  src.model.callbacks import early_stop
 from tensorflow.keras.optimizers import Adam
 from src.model.evaluate import CM,report
