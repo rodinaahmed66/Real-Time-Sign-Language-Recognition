@@ -53,7 +53,7 @@ model=CNN_model()
 history = model.fit(
     train_gen,
     validation_data=val_gen,
-    epochs=1,
+    epochs=45,
     callbacks=[early_stop]
 )
 
