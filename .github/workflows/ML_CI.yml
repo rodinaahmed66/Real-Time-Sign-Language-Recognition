@@ -10,8 +10,8 @@ jobs:
   train:
     runs-on: ubuntu-latest
     env:
-      IMG_PATH: data/images
-      LABEL_PATH: data/labels
+      IMG_PATH: data/X.npy
+      LABEL_PATH: data/Y.npy
 
     steps:
       # 1️⃣ Checkout repository
