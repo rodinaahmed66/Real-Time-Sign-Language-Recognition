@@ -11,8 +11,8 @@ import numpy as np
 
 
 # --- Paths ---
-img_path="data/images"
-label_path="data/labels"
+img_path="data/X.npy"
+label_path="data/Y.npy"
 
 
 # --- Load data ---
