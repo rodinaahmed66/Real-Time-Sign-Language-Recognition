@@ -42,4 +42,4 @@ jobs:
 
       # 6️⃣ Run training script
       - name: Run training
-        run: python src/model/train.py
+        run: PYTHONPATH=src python src/model/train.py
