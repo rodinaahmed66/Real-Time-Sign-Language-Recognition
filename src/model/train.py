@@ -11,8 +11,8 @@ import numpy as np
 
 
 # --- Paths ---
-img_path='enter path'
-label_path='enter path'
+img_path="data/images"
+label_path="data/labels"
 
 
 # --- Load data ---
