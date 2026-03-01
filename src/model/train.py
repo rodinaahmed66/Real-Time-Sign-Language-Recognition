@@ -1,7 +1,7 @@
 #import packages
-from data.data_loader import data_loader
-from data.data_explore import balance_or,remove_unbalance
-from data.data_handle import encode_label,split,train_generator,other_generator
+from data processing.data_loader import data_loader
+from data processing.data_explore import balance_or,remove_unbalance
+from data processing.data_handle import encode_label,split,train_generator,other_generator
 from model.architecture import CNN_model
 import matplotlib.pyplot as plt
 from utils.plot_history import plot_history,plot_CM
