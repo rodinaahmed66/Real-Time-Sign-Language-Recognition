@@ -44,4 +44,4 @@ jobs:
       - name: Run training
         run: python -m src.model.train
         env:
-            CI_MODE: "true" 
+            CI_MODE: "True" 
